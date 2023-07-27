@@ -11,8 +11,18 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body style="background-color:powderblue;">
+  
   <%= render partial: "shared/navbar"%>
+  <% if flash[:notice].present? %>
+    <div class="notice">
+      <%= flash[:notice] %>
+    </div>
+    <%else%>
+        <div class="alert">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
   <div class ="container">
     <%= yield %>
     </div>

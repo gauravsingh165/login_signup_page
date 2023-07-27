@@ -5,8 +5,13 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "about", to: "about#index"
   
-  get "sign_up", to: "registration#new"
+  get "sign_up", to: "registration#new" ,as: :new_sign_up
   post "sign_up" , to: "registration#create"
+
+  get "sign_in", to: "sessions#new", as: :new_sign_in
+  post "sign_in" , to: "sessions#create"
+
+  delete "logout", to: "sessions#destroy"
   
   root to: "main#index"
 end
