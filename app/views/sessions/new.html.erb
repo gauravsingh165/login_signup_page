@@ -8,8 +8,9 @@
   </div>
  <div style="background-color:green ;" class ="mb-3">
  <%= form.label :password %><br>
-   <%= form.password_field :password, class: "form-control",placeholder:"password" %>
- </div>
+<%= form.password_field :password, class: "form-control", placeholder: "password" %>
+<%= link_to "Forgot your password ?", password_reset_path %>
+</div>
   <%= form.submit "Sign In", class: "btn btn-primary", :"data-turbo"=> "false" %>
 <% end %>
  
