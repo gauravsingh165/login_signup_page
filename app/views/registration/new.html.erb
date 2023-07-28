@@ -2,16 +2,15 @@
 <%# <%= link_to "Sign In", new_sign_in_path %> 
 
 <%=form_with model: @user, url: sign_up_path, remote: false do |form|%>
-  <% if @user.errors.any? %>
-  <%# <%debugger%> 
+  <% if form.object.errors.any? %>
     <div class="alert alert-danger">
-      <% @user.errors.full_messages.each do |message| %>
+      <% form.object.errors.full_messages.each do |message| %>
         <div><%= message %></div>
       <% end %>
     </div>
   <% end %>
 
- <div class ="mb-3">
+ <div class ="mb-3" style="background-color:#FF9933 ;">
  <%= form.label :email %><br>
     <%= form.text_field :email, class: "form-control", placeholder: "gaurav123@gmail.com" %>
  </div>
@@ -19,7 +18,7 @@
  <%= form.label :password %><br>
    <%= form.password_field :password, class: "form-control",placeholder:"password" %>
  </div>
- <div  class ="mb-3">
+ <div  class ="mb-3" style="background-color:green">
  <%= form.label :password_confirmation %><br>
    <%= form.password_field :password_confirmation , class: "form-control",placeholder:"password"%>
  </div>

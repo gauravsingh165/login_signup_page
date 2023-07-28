@@ -2,11 +2,11 @@
 <%# <%= link_to "Back to Sign Up", new_sign_up_path %> 
 
 <%= form_for :session, url: sign_in_path do |form| %>
-  <div class="mb-3">
+  <div style="background-color:#FF9933 ;" class="mb-3">
     <%= form.label :email %><br>
     <%= form.text_field :email, class: "form-control", placeholder: "gaurav123@gmail.com" %>
   </div>
- <div  class ="mb-3">
+ <div style="background-color:green ;" class ="mb-3">
  <%= form.label :password %><br>
    <%= form.password_field :password, class: "form-control",placeholder:"password" %>
  </div>

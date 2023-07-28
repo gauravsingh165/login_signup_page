@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   get "about", to: "about#index"
+
+  get "password", to: "passwords#edit", as: :edit_password
+  patch "password", to: "passwords#update"
   
   get "sign_up", to: "registration#new" ,as: :new_sign_up
   post "sign_up" , to: "registration#create"
